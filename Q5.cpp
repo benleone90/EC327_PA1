@@ -9,12 +9,15 @@ int main()
 	cout << "Enter your character and operation:\n";
 	cin >> letter >> opor;
 
+	// Input validation to ensure it is a lower or uppercase letter
 	if (!((letter >= 'a' && letter <= 'z') || (letter >= 'A' && letter <= 'Z'))){
 		cout << "Illegal character" << endl;
 		return 1;
 	}
 
+	// Switch-case for each of the use cases
 	switch(opor){
+		// Change-case case
 		case 1:
 			if (letter >= 'a' && letter <= 'z'){
 				letter -= 32;
@@ -23,6 +26,7 @@ int main()
 			}
 			cout << "Result: " << letter << endl;
 			break;
+		// Change case and folded alphabet case
 		case 2:
 			if (letter >= 'a' && letter <= 'z'){
 				letter -= 32;
@@ -33,6 +37,7 @@ int main()
 			}
 			cout << "Result: " << letter << endl;
 			break;
+		// Lower/Upper case alphabet wrap
 		case 3:
 			if ((letter >= 'a' && letter <= 't') || (letter >= 'A' && letter <= 'T')){
 				letter += 6;
@@ -43,6 +48,7 @@ int main()
 			}
 			cout << "Result: " << letter << endl;
 			break;
+		// Default case when no operation is input or not one of above
 		default:
 			cout << "Illegal Operation" << endl;
 			break;

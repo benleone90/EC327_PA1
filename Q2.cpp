@@ -104,11 +104,12 @@ int main()
 	double sq2x2 = (sq2x + sq2side); //Finding second square lower right x-coordinate
 	double sq2y2 = (sq2y - sq2side); //Finding second square lower right y-coordinate
 
+	// Passing values to intersect function and outputting based on return
 	if (intersect(sq1x, sq1y, sq1x2, sq1y2, sq2x, sq2y, sq2x2, sq2y2)){
-		cout << "THE SQUARES INTERSECT!!!\n";
+		cout << "THE SQUARES INTERSECT!!!" << endl;
 	}
 	else {
-		cout << "THE SQUARES DO NOT INTERSECT :(\n";
+		cout << "THE SQUARES DO NOT INTERSECT :(" << endl;
 	}
 
 	return 0;

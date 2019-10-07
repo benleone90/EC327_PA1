@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+  // Constants for grade values; will not change
   const double A = 4.00;
   const double A_MINUS = 3.70;
   const double B_PLUS = 3.30;
@@ -23,7 +24,7 @@ int main()
     cout << "Please enter your grade for Class " << i+1 << endl;
     cin >> grade;
     cin.ignore();
-
+    // Checking to ensure input can be accepted as either lowercase or uppercase
     if(grade == "a" || grade == "A"){
       total += A;
     }
@@ -59,6 +60,7 @@ int main()
       return -1;
     }
   }
+  // Setting precision of the decimal to two places
   cout << "Your GPA is " << setprecision(2) << fixed << (total/5.00) << "!" << endl;
   return 0;
 }
